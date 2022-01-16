@@ -29,27 +29,10 @@ function setschowekowned(owner)
 		['@posiadanie']  = chuj	
 	}, 
 	function(rowsChanged)
-		local siemanigger = "https://discord.com/api/webhooks/932361363366494298/iVRvB2EETha4YWbE1--q_1caKJoQ2tSuqbQPW8zGs4AzmS1j29niteczSS7tHEOxvwWw"
 		local xPlayer = ESX.GetPlayerFromIdentifier(owner)
 
 		local name = GetPlayerName(source)
 		if xPlayer then
-
-			local embed = {
-				{
-					["color"] = 3066993,
-					["title"] = "Schowek",
-					["description"] = "Gracz: " ..name.. " Kupił schowek",
-					["footer"] = {
-						["text"] = "Woro",
-					},
-				}
-			}
-			
-		PerformHttpRequest(siemanigger, function(err, headers) end, 'POST', json.encode({username = "Woro", avatar_url = "https://cdn.discordapp.com/icons/890320530333397003/3f7b550a340b63beef8e2c6268ee25b3.webp", embeds = embed}), { ['Content-Type'] = 'application/json' })      
-		
-
-
 			print("Gracz "..owner.." kupil schowek")
 		end
 	end)
